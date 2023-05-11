@@ -1,0 +1,18 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: policy-generator-name
+placementBindingDefaults:
+  name: placement-binding.yaml
+policyDefaults:
+  namespace: default
+  remediationAction: inform
+  severity: medium
+policies:
+- name: policy-app-config-aliens
+  disabled: false
+  manifests:
+    - path: ../rules/more-rules/further-rules/
+  remediationAction: enforce
+  placement:
+    placementRulePath: placement-rule.yaml

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: game-config-fish
+  namespace: default
+data:
+  game.properties: |
+    enemies=goldfish  
+  ui.properties: |
+    color.good=neon-green
